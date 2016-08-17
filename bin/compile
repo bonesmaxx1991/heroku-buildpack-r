@@ -197,7 +197,8 @@ fi
 
 # install dependencies from CRAN
 echo "Executing init.r script" | indent
-
+find /home/vcap -name '*bin/R*'
+find /home/vcap -name '*etc/ldpaths*'
 # set the CRAN mirror and run the init.r program
 # NOTE: output can't be indented unfortunately
 /app/vendor/R/bin/R --no-save -s <<RPROG 2>&1 | indent
